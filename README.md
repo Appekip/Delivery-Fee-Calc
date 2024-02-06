@@ -1,6 +1,6 @@
 Wolt Software Engineering assignment
 
-I was tasked to create a Delivery Fee Calculator the instructions for the assignment
+I was tasked to create a Delivery Fee Calculator, the instructions for the assignment
 can be found here:
 https://github.com/woltapp/engineering-internship-2024
 
