@@ -6,16 +6,8 @@ https://github.com/woltapp/engineering-internship-2024
 
 The application is a simple React app that uses Typescript for it's logic
 
-Installation 
+Project setup
 
-Project dependancies can be installed with the following commands
-
-npm install
-
-npm install react-dom
-
-npm install tsc
-
-npm install tsx
+npm i
 
 npm start
