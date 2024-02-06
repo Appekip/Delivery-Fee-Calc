@@ -43,7 +43,7 @@ function deliveryFeeInterface(){
     );
 }
 
-function calc(){
+function calc() : void{
 
     //Function that is called when the "Calculate delivery price" button is pressed
     //First it gets the user inputted values from the website
@@ -75,7 +75,7 @@ function calc(){
     totalCalc(cartValue, deliveryDistance, itemQuantity);
 }
 
-function totalCalc(cv:number, dd: number, iq: number){
+function totalCalc(cv:number, dd: number, iq: number) : number{
     //cartValue, deliveryDestination and itemQuantity are passed in and used in their respective
     //calculations
 
@@ -118,7 +118,7 @@ function totalCalc(cv:number, dd: number, iq: number){
 
 }
 
-function updateDeliv(deliv: number){
+function updateDeliv(deliv: number) : void{
     //Function for updating "Delivery Fee" on the website
 
     //We create a rounded version of deliv to make sure it displays only 2 decimals
@@ -132,7 +132,7 @@ function updateDeliv(deliv: number){
 
 }
 
-function updateTotal(total: number){
+function updateTotal(total: number) : void{
     //Function for updating "Cart total" on the website
 
     //We create a rounded version of total to make sure it displays only 2 decimals
@@ -144,7 +144,7 @@ function updateTotal(total: number){
     totalDisplayOnPage.innerText = "Cart total: " + roundTotal + " €";
 }
 
-function cartValueCheck(cv:number){
+function cartValueCheck(cv:number) : number{
     //Cart value calculation Function, it takes cartValue as a parameter and
     //calculates and returns potential surcharge
     let surcharge:number;
@@ -159,7 +159,7 @@ function cartValueCheck(cv:number){
     return 0;
 }
 
-function distanceToEuro(dd: number){
+function distanceToEuro(dd: number) : number{
 
     //Function for calculating how distance effects the delivery Fee
 
@@ -184,7 +184,7 @@ function distanceToEuro(dd: number){
     return total;
 }
 
-function quantityCalc(q:number){
+function quantityCalc(q:number) : number{
 
     //Function for calculating if the item quantity will effect the total delivery price
     let quantity: number = q;
@@ -202,7 +202,7 @@ function quantityCalc(q:number){
     return 0;
 }
 
-function fridayRush(t: number){
+function fridayRush(t: number) : number{
     //Function for multiplying the delivery total
     //Since the friday rush modifier may be changed in the future
     //it's value is in a variable.
@@ -212,7 +212,7 @@ function fridayRush(t: number){
     return total * rushModifier;
 }
 
-function deliveryFeeTotal(dd:number, iq: number, fr: boolean){
+function deliveryFeeTotal(dd:number, iq: number, fr: boolean) : number{
 
     //Calculating total delivery by adding the calculated delivery price
     //and the calculated quantity price together
@@ -232,7 +232,7 @@ function deliveryFeeTotal(dd:number, iq: number, fr: boolean){
     return total;
 }
 
-function cartTotal(cv:number, csc: number, delivTotal:number){
+function cartTotal(cv:number, csc: number, delivTotal:number) : number{
     //Function for calculating all of the prices together
 
     let carTotal:number = cv + csc + delivTotal;
@@ -240,19 +240,19 @@ function cartTotal(cv:number, csc: number, delivTotal:number){
     return carTotal;
 }
 
-function currentTime(){
+function currentTime() : number{
     //Function for getting the time
     const now = new Date();
     return now.getHours();
 }
 
-function currentDay(){
+function currentDay() : number{
     //Function for getting the current day of the week
     const now = new Date();
     return now.getDay();
 }
 
-function checkTime(){
+function checkTime() : boolean{
 
     const selectedTimeOptionElement = form('input[name="timeOption"]:checked') as HTMLInputElement;
 

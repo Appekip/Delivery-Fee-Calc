@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import DeliveryFeeInterface from "./components/deliveryFeeInterface";
+import DeliveryFee from "./components/deliveryFee";
 import logo from "./woltLogo.png";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-        <DeliveryFeeInterface/>
+        <DeliveryFee/>
       </header>
     </div>
   );
